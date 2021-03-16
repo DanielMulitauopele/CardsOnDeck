@@ -1,4 +1,4 @@
-class Deck
+class GemDeck
     attr_accessor :cards
 
     def initialize(initial_card)
@@ -24,7 +24,7 @@ class Deck
         if type == 'Standard'
             standard_values.each do |k, array|
                 array.each do |value|
-                    standard_deck <<  Card.new(k, value)
+                    standard_deck <<  Card.new(k.to_s, value)
                 end
             end
         end

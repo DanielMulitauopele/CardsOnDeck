@@ -1,18 +1,18 @@
 require './test/test_helper'
-require './lib/cards_on_deck/card'
-require './lib/cards_on_deck/deck'
+require './lib/cards_on_deck/gem_card'
+require './lib/cards_on_deck/gem_deck'
 
-class DeckTest < MiniTest::Test 
+class GemDeckTest < MiniTest::Test 
     def setup
-        @card1 = Card.new("Hearts", "Nine")
-        @card2 = Card.new("Diamonds", "Queen")
-        @card3 = Card.new("Spades", "Ace")
+        @card1 = GemCard.new("Hearts", "Nine")
+        @card2 = GemCard.new("Diamonds", "Queen")
+        @card3 = GemCard.new("Spades", "Ace")
 
-        @deck = Deck.new(@card1)
+        @deck = GemDeck.new(@card1)
     end
 
     def test_it_exists
-        assert_instance_of Deck, @deck
+        assert_instance_of GemDeck, @deck
     end
 
     def test_it_starts_with_at_least_one_card
@@ -50,16 +50,6 @@ class DeckTest < MiniTest::Test
         actual = @deck.draw(1)
 
         assert_equal expected, actual 
-    end
-
-    def test_it_can_shuffle_cards
-        stack = [@card2, @card3]
-        @deck.add(stack)
-
-        expected = [@card1, @card2, @card3]
-        actual = @deck.shuffle
-
-        refute_equal expected, actual 
     end
 
     def test_it_can_create_standard_playing_deck
