@@ -1,4 +1,4 @@
-class Deck
+class GemDeck
     attr_accessor :cards
 
     def initialize(initial_card)

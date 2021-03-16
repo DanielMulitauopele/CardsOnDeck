@@ -1,4 +1,4 @@
-class Card
+class GemCard
     attr_accessor :suit, :value
     attr_reader :name, :rank, :code
 

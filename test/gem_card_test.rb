@@ -1,13 +1,13 @@
 require './test/test_helper'
-require './lib/cards_on_deck/card'
+require './lib/cards_on_deck/gem_card'
 
-class CardTest < MiniTest::Test
+class GemCardTest < MiniTest::Test
     def setup
-        @card = Card.new('Hearts', 'Nine')
+        @card = GemCard.new('Hearts', 'Nine')
     end
 
     def test_it_exists
-        assert_instance_of Card, @card
+        assert_instance_of GemCard, @card
     end
 
     def test_it_has_a_suit
