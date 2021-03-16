@@ -4,5 +4,10 @@ require_relative "cards_on_deck/version"
 
 module CardsOnDeck
   class Error < StandardError; end
-  # Your code goes here...
+
+  def self.card 
+    puts "This is a card!"
+
+    arr = [1, 2, 3]
+  end
 end
