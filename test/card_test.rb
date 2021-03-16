@@ -31,6 +31,20 @@ class CardTest < MiniTest::Test
         assert_equal expected, actual
     end
 
+    def test_it_can_calculate_rank
+        expected = 9.03
+        actual = @card.rank
+        
+        assert_equal expected, actual
+    end
+
+    def test_it_has_a_code 
+        expected = '9H'
+        actual = @card.code 
+
+        assert_equal expected, actual
+    end
+
     def test_it_has_a_color
         expected = 'Red'
         actual = @card.color
